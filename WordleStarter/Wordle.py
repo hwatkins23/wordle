@@ -14,8 +14,13 @@ from WordleGraphics import WordleGWindow
 
 def wordle():
 
+    """Milestone 2"""
     def enter_action(s):
-        gw.show_message("You have to implement this method.")
+        guess = s.lower()
+        if guess in FIVE_LETTER_WORDS:
+            gw.show_message("Yay! I found it in the dictionary!")
+        else:
+            gw.show_message("That word ain't in our dictionary")
 
     gw = WordleGWindow()
     gw.add_enter_listener(enter_action)
